@@ -2,4 +2,4 @@
 
 An example repository
 
-This is now and _updated_ Repository
+This is now an _updated_ Repository
