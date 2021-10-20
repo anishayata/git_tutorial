@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Font Selector</title>
+    </head>
+    <body style="text-align: center;">
+        <marquee>sample program</marquee>
+        <marquee bgcolor="pink" behavior="scroll">sample program</marquee>
+        <form name="myform">
+            <br><br>
+            <label>Input Text</label>
+            <input type="text" name="ip" id="ip" value=""/>
+            <br><br>
+            <label>Select Font</label>
+            <select name="font" id="font">
+                <option value="Brush Script MT">Brush Script MT</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <!-- <option value="Serif">Serif</option> -->
+                <!-- <option value="Arial">Arial</option> -->
+                <!-- <option value="Verdana">Verdana</option> -->
+                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+            </select>
+            <br><br>
+            <INPUT TYPE="button" NAME="button" Value="Submit" onClick="font_select()"/>
+            <br><br>
+            <label>Stylized Text</label>
+            <INPUT TYPE="text" ID="res" NAME="result" VALUE=""/>
+        </form>
+        <!-- <p>some text to enable scrolling</p> -->
+
+        <script>
+            function font_select()
+            {
+               var selector = document.getElementById('font');
+               var family = selector.options[selector.selectedIndex].value;
+               var txt = document.myform.ip.value;
+               document.getElementById('res').value = txt;
+               var n = document.getElementById('res')
+               n.style.fontFamily = family;
+               document.getElementById("res").style.color="blue";
+               document.body.style.backgroundColor="purple";
+            //    var x=document.body.style.backgroundAttachment;
+            //    document.getElementById("toggle").innerHTML=(x="scroll")?"set text to scroll":"set text to fixed";
+            //    document.body.style.backgroundColor=(x="scroll")?"fixed":"scroll";
+                           
+            }
+          </script>
+         
+    </body>
+</html>
